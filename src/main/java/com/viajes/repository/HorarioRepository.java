@@ -15,7 +15,7 @@ public interface HorarioRepository extends JpaRepository<Horario, Integer> {
 	
 	@Query("""
 			SELECT h FROM Horario h
-			WHERE h.ruta.ciudadOrigen.IdCiudad=:origen
+			WHERE h.ruta.ciudadOrigen.idCiudad=:origen
 			AND h.ruta.ciudadDestino.idCiudad=:destino
 			AND h.fechaSalida=:fecha
 			""")
